@@ -10,7 +10,7 @@ setup(
     name='object_detection',
     version='0.1',
     install_requires=REQUIRED_PACKAGES,
-    include_package_data=True,
     packages=[p for p in find_packages() if p.startswith('object_detection')],
+    package_data={'object_detection': ['data/*.pbtxt', 'protos/*.proto']},
     description='Tensorflow Object Detection Library',
 )
